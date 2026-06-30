@@ -1,0 +1,439 @@
+/* --- Global Styles --- */
+:root {
+    --black: #111111;
+    --beige: #f4efe9;
+    --white: #ffffff;
+    --font-sans: 'Montserrat', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+    --font-script: 'Alex Brush', cursive;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    color: var(--black);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+}
+
+.script-text {
+    font-family: var(--font-script);
+    font-size: 1.5em;
+    margin-right: -10px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Navigation --- */
+nav {
+    background-color: black; 
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.logo .script-text {
+    font-size: 1.8rem;
+    margin-right: 5px;
+    text-transform: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a:hover {
+    color: var(--beige);
+}
+
+.cart {
+    border: 1px solid var(--white);
+    padding: 0.5rem 1rem;
+}
+
+/* --- Hero Section --- */
+.hero {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    background: url('https://via.placeholder.com/1500x800/111111/ffffff?text=Luxury+Background+Image') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* FIX 3: Added relative positioning to anchor the navigation bar to the hero section */
+    position: relative; 
+}
+
+.hero-box {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 3rem 4rem 4rem 4rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; 
+}
+
+.hero-box .script-text {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-box h1 {
+    font-size: 3rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--beige);
+    color: var(--black);
+    padding: 1rem 2rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(50%); 
+}
+
+.btn-primary:hover {
+    background-color: #e2dacd;
+}
+
+/* --- As Seen In --- */
+.as-seen-in {
+    scroll-snap-align: start;
+    background-color: var(--beige);
+    padding: 2rem 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.logos {
+    display: flex;
+    gap: 3rem;
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* --- Welcome Section --- */
+.welcome-section {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    background-color: var(--black);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    padding: 6rem 10%;
+    gap: 5rem;
+}
+
+.welcome-text {
+    flex: 1;
+    text-align: center;
+}
+
+.welcome-text h3 {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.welcome-text h2 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 3rem;
+}
+
+.welcome-text p {
+    font-size: 0.85rem;
+    margin-bottom: 2rem;
+    color: #cccccc;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.welcome-images {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.arch-image {
+    width: 300px;
+    height: 450px;
+    background: url('https://via.placeholder.com/300x450/444/fff?text=Main+Portrait') center/cover;
+    border-radius: 150px 150px 0 0;
+}
+
+.float-img {
+    position: absolute;
+    border: 5px solid var(--black);
+}
+
+.float-img-1 {
+    width: 100px;
+    height: 100px;
+    background: url('https://via.placeholder.com/100/666/fff?text=1') center/cover;
+    top: 20%;
+    left: 10%;
+}
+
+.float-img-2 {
+    width: 80px;
+    height: 80px;
+    background: url('https://via.placeholder.com/80/666/fff?text=2') center/cover;
+    bottom: 10%;
+    left: 20%;
+    border-radius: 50%;
+}
+
+.float-img-3 {
+    width: 90px;
+    height: 90px;
+    background: url('https://via.placeholder.com/90/666/fff?text=3') center/cover;
+    bottom: 15%;
+    right: 15%;
+}
+
+/* --- Services Section --- */
+.services-section {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    /* FIX 4: Removed justify-content: center; so that on smaller laptops, the top of the long price list isn't hidden off-screen */
+    background-color: var(--beige);
+    padding: 6rem 10%;
+    text-align: center;
+}
+
+.services-header {
+    margin-bottom: 4rem;
+}
+
+.services-header h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-header p {
+    font-size: 0.9rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: var(--white);
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-img {
+    width: 100%;
+    height: 250px;
+    background-color: #ddd;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: -1.5rem; 
+}
+
+.service-label {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 1rem 2rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 80%;
+    text-align: center;
+    z-index: 10;
+}
+
+/* --- Price List Styling --- */
+.price-list {
+    list-style: none;
+    width: 100%;
+    padding: 2.5rem 1.5rem 0 1.5rem; 
+    text-align: left; 
+}
+
+.price-list li {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-end;
+    font-size: 0.75rem;
+    color: #555;
+    margin-bottom: 0.8rem;
+    border-bottom: 1px dotted #e0e0e0; 
+    padding-bottom: 0.2rem;
+}
+
+.price-list li span:first-child {
+    padding-right: 10px; 
+}
+
+.price-list li span:last-child {
+    font-weight: 600;
+    color: var(--black);
+    white-space: nowrap; 
+}
+
+/* FIX 2: CSS styling for the list-spacer to replace the <br> tags cleanly */
+.list-spacer {
+    border-bottom: none !important;
+    margin-bottom: 1.5rem !important;
+    padding: 0 !important;
+}
+
+/* Responsive Design */
+/* --- Responsive Design & Mobile Optimization --- */
+
+/* For smaller laptops and tablets */
+@media (max-width: 1024px) {
+    .services-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+/* For mobile phones and small tablets */
+@media (max-width: 768px) {
+    
+    /* Global Section Adjustments */
+    .welcome-section, .services-section { 
+        padding: 4rem 5%; 
+    }
+
+    /* Navigation */
+    .nav-links { 
+        display: none; /* Hides the links to save space */
+    }
+    nav {
+        padding: 1rem 5%;
+    }
+
+    /* Hero Section */
+    .hero-box {
+        padding: 2.5rem 1.5rem 3.5rem 1.5rem;
+        width: 90%; /* Prevents the box from touching the screen edges */
+    }
+    .hero-box h1 { 
+        font-size: 2.2rem; 
+        letter-spacing: 2px;
+    }
+    .hero-box .script-text { 
+        font-size: 2rem; 
+    }
+
+    /* As Seen In Section */
+    .as-seen-in { 
+        flex-direction: column; 
+        gap: 1.5rem; 
+        text-align: center;
+    }
+    .logos {
+        flex-wrap: wrap; /* Allows logos to wrap to the next line instead of shrinking */
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    /* Welcome Section */
+    .welcome-section { 
+        flex-direction: column; 
+        gap: 3rem;
+    }
+    .welcome-text h2 { 
+        font-size: 2rem; 
+    }
+    .arch-image {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Services Section */
+    .services-header h2 { 
+        font-size: 2.2rem; 
+    }
+    .services-grid { 
+        grid-template-columns: 1fr; /* Forces exactly one column */
+    }
+    .service-label {
+        width: 90%;
+        font-size: 0.75rem;
+        padding: 1rem;
+    }
+    
+    /* Price List Optimization */
+    .price-list {
+        padding: 2rem 1rem 0 1rem;
+    }
+    .price-list li {
+        font-size: 0.65rem; /* Shrinks the text so long service names don't overlap prices */
+    }
+}
