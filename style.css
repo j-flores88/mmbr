@@ -123,39 +123,27 @@ nav {
     position: relative; 
 }
 
-.hero-box {
-    background-color: var(--black);
-    color: var(--white);
-    text-align: center;
-    padding: 3rem 4rem 4rem 4rem; 
+.hero-center {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    position: relative; 
+    padding: 2rem;
+    position: relative;
+    width: 100%;
 }
 
-.hero-logo {
-    max-width: 100%; 
+.main-hero-logo {
+    width: 100%;
+    max-width: 550px;
     height: auto;
-    margin-bottom: 2rem;
     object-fit: contain;
+    filter: drop-shadow(0px 20px 30px rgba(0,0,0,0.6)); 
+    animation: fadeIn 1.5s ease-in-out;
 }
 
-.btn-primary {
-    font-family: var(--font-sans);
-    background-color: var(--gold);
-    color: var(--black);
-    padding: 1rem 2rem;
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s, color 0.3s;
-    position: absolute;
-    bottom: 0;
-    transform: translateY(50%); 
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .btn-primary:hover {
