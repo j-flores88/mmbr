@@ -10,3 +10,17 @@ const hamburger = document.querySelector(".hamburger");
         hamburger.classList.remove("active");
         navLinks.classList.remove("active");
     }));
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const accordions = document.querySelectorAll('.accordion-header');
+
+    accordions.forEach(header => {
+        header.addEventListener('click', () => {
+            // Find the parent list item
+            const item = header.parentElement;
+            
+            // Toggle the 'active' class on and off
+            item.classList.toggle('active');
+        });
+    });
+});

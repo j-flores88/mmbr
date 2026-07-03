@@ -299,7 +299,7 @@ nav {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
 }
 
@@ -361,6 +361,71 @@ nav {
     font-weight: 600;
     color: var(--hot-pink);
     white-space: nowrap; 
+}
+
+/* --- Dropdown (Accordion) Styling for Facials --- */
+.accordion-list {
+    list-style: none;
+    width: 100%;
+    padding: 2.5rem 1.5rem 0 1.5rem; 
+    text-align: left; 
+}
+
+.accordion-item {
+    border-bottom: 1px dotted #e0e0e0; 
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.2rem;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-end;
+    font-size: 0.75rem;
+    color: #555;
+    cursor: pointer; /* Makes it look clickable */
+    transition: color 0.3s;
+}
+
+.accordion-header:hover {
+    color: var(--black);
+}
+
+.accordion-header span:first-child {
+    padding-right: 10px; 
+}
+
+/* Adds a gold '+' sign next to the title to indicate it opens */
+.accordion-header span:first-child::after {
+    content: ' +';
+    color: var(--gold);
+    font-weight: bold;
+}
+
+/* Changes to a '-' when opened */
+.accordion-item.active .accordion-header span:first-child::after {
+    content: ' -';
+}
+
+.accordion-header span:last-child {
+    font-weight: 600;
+    color: var(--hot-pink);
+    white-space: nowrap; 
+}
+
+.accordion-content {
+    display: none; /* Hidden by default */
+    padding-top: 0.8rem;
+    padding-bottom: 0.5rem;
+    font-size: 0.7rem;
+    color: #666;
+    line-height: 1.5;
+    text-transform: none; /* Keeps the descriptions looking like normal text */
+}
+
+/* Shows the content when the 'active' class is added by Javascript */
+.accordion-item.active .accordion-content {
+    display: block;
 }
 
 .list-spacer {
