@@ -551,6 +551,14 @@ nav {
     transform: translateY(-5px);
 }
 
+.back-to-top:active,
+.back-to-top:focus {
+    background-color: var(--black);
+    color: var(--hot-pink);
+    border: 2px solid var(--hot-pink);
+    outline: none;
+}
+
 @media (min-width: 769px) {
     .site-footer {
         padding: 2rem 10% 1.5rem 10%; 

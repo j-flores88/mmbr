@@ -24,3 +24,7 @@ const hamburger = document.querySelector(".hamburger");
         });
     });
 });
+
+document.querySelector('.back-to-top').addEventListener('click', function() {
+    this.blur();
+});
