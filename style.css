@@ -521,6 +521,13 @@ nav {
 }
 
 @media (max-width: 768px) {
+    html {
+        scroll-snap-type: none;
+    }
+
+    .welcome-section, .services-section { 
+        padding: 4rem 5%; 
+    }
     .welcome-section, .services-section { 
         padding: 4rem 5%; 
     }
