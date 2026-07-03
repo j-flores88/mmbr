@@ -6,61 +6,63 @@
     <title>MIRROR MIRROR Beauty Room</title>
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
 </head>
 <body>
-
-    <header class="hero">
+    <header class="hero" id="home">
         <nav>
             <div class="logo">
-                <span class="script-text">MM</span> BEAUTY
+                <img src="./assets/mirror_logo_2.png" alt="Mirror Mirror Beauty Logo" class="nav-logo">
             </div>
             <div class="nav-links">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Resources</a>
-                <a href="#">Blog</a>
-                <a href="#">Contact</a>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
             </div>
-            <div class="cart">Cart 0</div>
+            <div class="nav-actions">
+            <a href="#booking" class="book">Book Now</a>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
         </nav>
 
         <div class="hero-box">
-            <h1>Mirror Mirror</h1>
-            <span class="script-text">Beauty Room</span>
-            <button class="btn-primary">Let's Get Started</button>
+            <img src="./assets/mirror_logo_2.png" alt="Mirror Mirror Beauty Logo" class="hero-logo">
+            <a href="#services" class="btn-primary">Let's Get Started</a>
         </div>
     </header>
 
     <section class="as-seen-in">
-        <span>AS SEEN IN</span>
         <div class="logos">
-            <span>GQ</span>
-            <span>LONDON FASHION WEEK</span>
-            <span>VOGUE</span>
-            <span>GLAMOUR</span>
+            <span>WHO'S THE BADDEST OF THEM ALL?</span>
         </div>
     </section>
 
-    <section class="welcome-section">
+    <section class="welcome-section" id="about">
         <div class="welcome-text">
             <h3>Welcome To</h3>
             <h2>MIRROR MIRROR</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias temporibus ipsam eligendi asperiores quam voluptatum velit modi, molestiae, inventore debitis harum pariatur optio, consequatur voluptatibus quibusdam suscipit? Saepe, accusantium. Sed!</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci ex voluptatum illum ullam! Amet incidunt facilis reprehenderit tempore dolores, error quisquam voluptatum ut, perspiciatis vero saepe dolore aspernatur dolorum veritatis.</p>
+            <p><i>"Mirror, mirror on the wall, who's the baddest of them all?"</i></p>
+            <p>When you step into our studio, that question answers itself. Mirror Mirror Beauty Room was founded on a single, unwavering mission: to make every woman feel absolutely stunning in her own skin.</p>
+            <p>We know that true beauty is rooted in confidence. That's why this space was designed to be more than just a salon—it’s a sanctuary where women uplift, support, and celebrate one another. Whether you are here for a bold new color, flawless lashes, or a rejuvenating facial, our ultimate goal is to ensure you walk out feeling fierce, radiant, and unstoppable.</p>
+            <p>You are the <strong style="color: var(--hot-pink);">fairest</strong>, the <strong style="color: var(--hot-pink);">fiercest</strong>, and the <strong style="color: var(--hot-pink);">BADDEST</strong> of them all. Let us help you show the world.</p>
         </div>
         <div class="welcome-images">
-            <div class="arch-image"></div>
+            <img src="./assets/IMG_0756.jpg" alt="Mirror Mirror Beauty Studio" class="welcome-portrait">
             <div class="float-img float-img-1"></div>
             <div class="float-img float-img-2"></div>
             <div class="float-img float-img-3"></div>
         </div>
     </section>
 
-    <section class="services-section">
+    <section class="services-section" id="services">
         <div class="services-header">
             <h2><span class="script-text">Our</span>&nbsp;SERVICES</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum dicta itaque, aperiam officia sint fugiat eos porro cumque dignissimos similique laboriosam. Voluptates delectus natus excepturi. Fugit maxime a suscipit sed!</p>
+            <p>Elevate your look with our comprehensive list of luxury beauty and styling services. To ensure every client receives our undivided attention and the ultimate pampering experience, Mirror Mirror operates strictly by appointment only. We do not accept walk-ins.</p>
         </div>
         <div class="services-grid">
             
@@ -107,16 +109,14 @@
                 <div class="service-label">HAIR STYLING & COLOR</div>
                 <ul class="price-list">
                         <li><span>LADIES CUT & BLOW DRY</span> <span>$60+</span></li>
-                        <li><span>MEN'S CUT</span> <span>$30+</span></li>
                         <li><span>GIRL'S CUT (12 & UNDER)</span> <span>$30+</span></li>
-                        <li><span>BOY'S CUT (12 & UNDER)</span> <span>$20+</span></li>
                         <li><span>WASH & BLOW DRY</span> <span>$45+</span></li>
                         <li><span>WASH, BLOW DRY & CURLS</span> <span>$55+</span></li>
                         <li class="list-spacer"></li>
                         <li><span>PARTIAL HIGHLIGHTS</span> <span>$120+</span></li>
                         <li><span>FULL HEAD HIGHLIGHTS</span> <span>$150+</span></li>
                         <li><span>ROOT TOUCH UP</span> <span>$90+</span></li>
-                        <li><span>TONE & HAIR REFRESH (blow dry included)</span> <span>$65+</span></li>
+                        <li><span>VIVID COLORS</span> <span>$150+</span></li>
                         <li><span>CONDITIONING TREATMENT (add-on)</span> <span>$25+</span></li>
                     </ul>
                 </div>
@@ -124,5 +124,40 @@
         </div>
     </section>
 
+    <section class="booking-section" id="booking">
+        <div class="booking-content">
+            <h2><span class="script-text">Hold</span> on tight...</h2>
+            <h3>WE'RE ALMOST READY TO SEE YOU</h3>
+            <p>We are putting the final touches on our luxury space and awaiting final state board approval. We cannot wait to welcome you into Mirror Mirror Beauty Room. Check back soon for our official opening dates and booking availability!</p>
+        </div>
+    </section>
+
+    <footer class="site-footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-info">
+                <h4>MIRROR MIRROR</h4>
+                <p>218 Elks Point Rd<br>Zephyr Cove, NV 89448</p>
+                <p>Phone: (530) 314-7825</p>
+                <p>Email: mirrormirrorbeautyroom.com</p>
+                <p>License: #C - 56547</p>
+            </div>
+            
+            <div class="footer-social">
+                <a href="https://www.instagram.com/mirror_mirror__beauty_room?igsh=MTQ4Mmc0bmJ3dWdjbw==" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        
+        <hr class="footer-divider">
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mirror Mirror Beauty Room. All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

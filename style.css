@@ -1,8 +1,8 @@
-/* --- Global Styles --- */
 :root {
     --black: #111111;
-    --beige: #f4efe9;
     --white: #ffffff;
+    --gold: #d4af37;
+    --hot-pink: #ff1493;
     --font-sans: 'Montserrat', sans-serif;
     --font-serif: 'Playfair Display', serif;
     --font-script: 'Alex Brush', cursive;
@@ -35,6 +35,7 @@ h1, h2, h3 {
     font-family: var(--font-script);
     font-size: 1.5em;
     margin-right: -10px;
+    color: var(--hot-pink);
 }
 
 a {
@@ -42,9 +43,8 @@ a {
     color: inherit;
 }
 
-/* --- Navigation --- */
 nav {
-    background-color: black; 
+    background-color: var(--black); 
     color: var(--white);
     display: flex;
     justify-content: space-between;
@@ -53,7 +53,6 @@ nav {
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    
     position: absolute;
     top: 0;
     left: 0;
@@ -62,16 +61,14 @@ nav {
 }
 
 .logo {
-    font-family: var(--font-serif);
-    font-size: 1.5rem;
     display: flex;
     align-items: center;
 }
 
-.logo .script-text {
-    font-size: 1.8rem;
-    margin-right: 5px;
-    text-transform: none;
+.nav-logo {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
 }
 
 .nav-links {
@@ -80,23 +77,49 @@ nav {
 }
 
 .nav-links a:hover {
-    color: var(--beige);
+    color: var(--hot-pink);
+    transition: color 0.3s;
 }
 
-.cart {
-    border: 1px solid var(--white);
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--gold);
+}
+
+.book {
+    border: 1px solid var(--gold);
     padding: 0.5rem 1rem;
+    color: var(--gold);
+    transition: all 0.3s;
 }
 
-/* --- Hero Section --- */
+.book:hover {
+    background-color: var(--gold);
+    color: var(--black);
+}
+
 .hero {
     min-height: 100vh;
     scroll-snap-align: start;
-    background: url('https://via.placeholder.com/1500x800/111111/ffffff?text=Luxury+Background+Image') center/cover no-repeat;
+    background: url('./assets/splash_big.jpeg') center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* FIX 3: Added relative positioning to anchor the navigation bar to the hero section */
     position: relative; 
 }
 
@@ -111,20 +134,16 @@ nav {
     position: relative; 
 }
 
-.hero-box .script-text {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.hero-box h1 {
-    font-size: 3rem;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
+.hero-logo {
+    max-width: 100%; 
+    height: auto;
+    margin-bottom: 2rem;
+    object-fit: contain;
 }
 
 .btn-primary {
-    background-color: var(--beige);
+    font-family: var(--font-sans);
+    background-color: var(--gold);
     color: var(--black);
     padding: 1rem 2rem;
     font-size: 0.8rem;
@@ -133,20 +152,21 @@ nav {
     letter-spacing: 1px;
     border: none;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s, color 0.3s;
     position: absolute;
     bottom: 0;
     transform: translateY(50%); 
 }
 
 .btn-primary:hover {
-    background-color: #e2dacd;
+    background-color: var(--hot-pink);
+    color: var(--white);
 }
 
-/* --- As Seen In --- */
 .as-seen-in {
     scroll-snap-align: start;
-    background-color: var(--beige);
+    background-color: var(--gold);
+    color: var(--black);
     padding: 2rem 5%;
     display: flex;
     justify-content: center;
@@ -160,12 +180,10 @@ nav {
 .logos {
     display: flex;
     gap: 3rem;
-    font-family: var(--font-serif);
     font-size: 1.2rem;
     font-weight: 600;
 }
 
-/* --- Welcome Section --- */
 .welcome-section {
     min-height: 100vh;
     scroll-snap-align: start;
@@ -188,6 +206,7 @@ nav {
     letter-spacing: 4px;
     text-transform: uppercase;
     margin-bottom: 1rem;
+    color: var(--gold);
 }
 
 .welcome-text h2 {
@@ -212,6 +231,17 @@ nav {
     justify-content: center;
 }
 
+.welcome-portrait {
+    width: 100%;
+    max-width: 450px; 
+    height: auto;
+    object-fit: cover;
+    position: relative;
+    z-index: 10;
+    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 75%);
+    mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 75%);
+}
+
 .arch-image {
     width: 300px;
     height: 450px;
@@ -221,7 +251,7 @@ nav {
 
 .float-img {
     position: absolute;
-    border: 5px solid var(--black);
+    border: 5px solid var(--gold);
 }
 
 .float-img-1 {
@@ -249,14 +279,12 @@ nav {
     right: 15%;
 }
 
-/* --- Services Section --- */
 .services-section {
     min-height: 100vh;
     scroll-snap-align: start;
     display: flex;
     flex-direction: column;
-    /* FIX 4: Removed justify-content: center; so that on smaller laptops, the top of the long price list isn't hidden off-screen */
-    background-color: var(--beige);
+    background-color: var(--white);
     padding: 6rem 10%;
     text-align: center;
 }
@@ -271,6 +299,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--black);
 }
 
 .services-header p {
@@ -292,6 +321,8 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 .service-img {
@@ -305,7 +336,7 @@ nav {
 
 .service-label {
     background-color: var(--black);
-    color: var(--white);
+    color: var(--gold);
     padding: 1rem 2rem;
     font-size: 0.8rem;
     font-weight: 600;
@@ -316,7 +347,6 @@ nav {
     z-index: 10;
 }
 
-/* --- Price List Styling --- */
 .price-list {
     list-style: none;
     width: 100%;
@@ -341,99 +371,260 @@ nav {
 
 .price-list li span:last-child {
     font-weight: 600;
-    color: var(--black);
+    color: var(--hot-pink);
     white-space: nowrap; 
 }
 
-/* FIX 2: CSS styling for the list-spacer to replace the <br> tags cleanly */
 .list-spacer {
     border-bottom: none !important;
     margin-bottom: 1.5rem !important;
     padding: 0 !important;
 }
 
-/* Responsive Design */
-/* --- Responsive Design & Mobile Optimization --- */
+.booking-section {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    background-color: var(--hot-pink);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 6rem 10%;
+}
 
-/* For smaller laptops and tablets */
+.booking-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.booking-content h2 .script-text {
+    color: var(--white);
+}
+
+.booking-content h3 {
+    font-family: var(--font-sans);
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    margin-bottom: 2rem;
+}
+
+.booking-content p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--white);
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.site-footer {
+    scroll-snap-align: start;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 4rem 10% 2rem 10%;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.footer-info h4 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+    letter-spacing: 2px;
+    color: var(--gold);
+}
+
+.footer-info p {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+    color: #cccccc;
+}
+
+.footer-social a {
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: var(--white);
+}
+
+.footer-social a:hover {
+    transform: translateY(-4px);
+    color: var(--hot-pink);
+}
+
+.footer-bottom {
+    padding-top: 2rem;
+    font-size: 0.75rem;
+    color: #777777;
+    letter-spacing: 1px;
+}
+
+.footer-divider {
+    border: 0;
+    height: 1px;
+    background: var(--gold);
+    width: 100%;
+    max-width: 1200px;
+    margin: 1.5rem auto;
+}
+
+@media (min-width: 769px) {
+    .site-footer {
+        padding: 2rem 10% 1.5rem 10%; 
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .footer-container {
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center; 
+        align-items: center;
+        margin-bottom: 0;
+        gap: 4rem; 
+    }
+
+    .footer-info {
+        display: flex;
+        align-items: center;
+        gap: 3rem; 
+        text-align: left;
+    }
+
+    .footer-info h4, 
+    .footer-info p {
+        margin-bottom: 0; 
+    }
+
+    .footer-bottom {
+        padding-top: 0.5rem;
+        font-size: 0.75rem;
+        color: #777777;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+}
+
 @media (max-width: 1024px) {
     .services-grid { 
         grid-template-columns: repeat(2, 1fr); 
     }
 }
 
-/* For mobile phones and small tablets */
 @media (max-width: 768px) {
-    
-    /* Global Section Adjustments */
     .welcome-section, .services-section { 
         padding: 4rem 5%; 
     }
 
-    /* Navigation */
-    .nav-links { 
-        display: none; /* Hides the links to save space */
-    }
     nav {
         padding: 1rem 5%;
     }
 
-    /* Hero Section */
+    .hamburger {
+        display: block; 
+    }
+
+    .nav-links { 
+        position: fixed;
+        top: -100%; 
+        left: 0; 
+        flex-direction: column;
+        background-color: var(--black);
+        width: 100%;
+        text-align: center;
+        transition: 0.4s ease-in-out; 
+        box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+        z-index: -1; 
+    }
+
+    .nav-links a {
+        margin: 1.5rem 0;
+        display: block; 
+        font-size: 1.2rem;
+    }
+
+    .nav-links.active {
+        top: 70px; 
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }   
+
     .hero-box {
         padding: 2.5rem 1.5rem 3.5rem 1.5rem;
-        width: 90%; /* Prevents the box from touching the screen edges */
+        width: 90%; 
     }
+    
     .hero-box h1 { 
         font-size: 2.2rem; 
         letter-spacing: 2px;
     }
+    
     .hero-box .script-text { 
         font-size: 2rem; 
     }
 
-    /* As Seen In Section */
     .as-seen-in { 
         flex-direction: column; 
         gap: 1.5rem; 
         text-align: center;
     }
+    
     .logos {
-        flex-wrap: wrap; /* Allows logos to wrap to the next line instead of shrinking */
+        flex-wrap: wrap; 
         justify-content: center;
         gap: 1.5rem;
     }
 
-    /* Welcome Section */
     .welcome-section { 
         flex-direction: column; 
         gap: 3rem;
     }
+    
     .welcome-text h2 { 
         font-size: 2rem; 
     }
+    
     .arch-image {
         width: 100%;
         max-width: 300px;
     }
 
-    /* Services Section */
     .services-header h2 { 
         font-size: 2.2rem; 
     }
+    
     .services-grid { 
-        grid-template-columns: 1fr; /* Forces exactly one column */
+        grid-template-columns: 1fr; 
     }
+    
     .service-label {
         width: 90%;
         font-size: 0.75rem;
         padding: 1rem;
     }
     
-    /* Price List Optimization */
     .price-list {
         padding: 2rem 1rem 0 1rem;
     }
+    
     .price-list li {
-        font-size: 0.65rem; /* Shrinks the text so long service names don't overlap prices */
+        font-size: 0.65rem; 
     }
 }
