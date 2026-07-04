@@ -1,25 +1,22 @@
 const hamburger = document.querySelector(".hamburger");
-    const navLinks = document.querySelector(".nav-links");
+const navLinks = document.querySelector(".nav-links");
 
-    hamburger.addEventListener("click", () => {
-        hamburger.classList.toggle("active");
-        navLinks.classList.toggle("active");
-    });
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navLinks.classList.toggle("active");
+});
 
-    document.querySelectorAll(".nav-links a").forEach(n => n.addEventListener("click", () => {
-        hamburger.classList.remove("active");
-        navLinks.classList.remove("active");
-    }));
+document.querySelectorAll(".nav-links a").forEach(n => n.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navLinks.classList.remove("active");
+}));
 
-    document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const accordions = document.querySelectorAll('.accordion-header');
 
     accordions.forEach(header => {
         header.addEventListener('click', () => {
-            // Find the parent list item
             const item = header.parentElement;
-            
-            // Toggle the 'active' class on and off
             item.classList.toggle('active');
         });
     });

@@ -146,11 +146,6 @@ nav {
     to { opacity: 1; transform: translateY(0); }
 }
 
-.btn-primary:hover {
-    background-color: var(--hot-pink);
-    color: var(--white);
-}
-
 .as-seen-in {
     scroll-snap-align: start;
     background-color: var(--gold);
@@ -363,7 +358,23 @@ nav {
     white-space: nowrap; 
 }
 
-/* --- Dropdown (Accordion) Styling for Facials --- */
+.price-list-item {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-end;
+    font-size: 0.75rem;
+    color: #555;
+    margin-bottom: 0.8rem;
+    border-bottom: 1px dotted #e0e0e0; 
+    padding-bottom: 0.2rem;
+}
+
+.price-list-item span:last-child {
+    font-weight: 600;
+    color: var(--hot-pink);
+    white-space: nowrap; 
+}
+
 .accordion-list {
     list-style: none;
     width: 100%;
@@ -383,7 +394,7 @@ nav {
     align-items: flex-end;
     font-size: 0.75rem;
     color: #555;
-    cursor: pointer; /* Makes it look clickable */
+    cursor: pointer;
     transition: color 0.3s;
 }
 
@@ -395,14 +406,12 @@ nav {
     padding-right: 10px; 
 }
 
-/* Adds a gold '+' sign next to the title to indicate it opens */
 .accordion-header span:first-child::after {
     content: ' +';
     color: var(--gold);
     font-weight: bold;
 }
 
-/* Changes to a '-' when opened */
 .accordion-item.active .accordion-header span:first-child::after {
     content: ' -';
 }
@@ -414,16 +423,15 @@ nav {
 }
 
 .accordion-content {
-    display: none; /* Hidden by default */
+    display: none;
     padding-top: 0.8rem;
     padding-bottom: 0.5rem;
     font-size: 0.7rem;
     color: #666;
     line-height: 1.5;
-    text-transform: none; /* Keeps the descriptions looking like normal text */
+    text-transform: none; 
 }
 
-/* Shows the content when the 'active' class is added by Javascript */
 .accordion-item.active .accordion-content {
     display: block;
 }
@@ -527,7 +535,6 @@ nav {
     margin: 1.5rem auto;
 }
 
-/* --- Back to Top Arrow --- */
 .back-to-top {
     position: fixed;
     bottom: 30px;
@@ -613,9 +620,6 @@ nav {
     .welcome-section, .services-section { 
         padding: 4rem 5%; 
     }
-    .welcome-section, .services-section { 
-        padding: 4rem 5%; 
-    }
 
     nav {
         padding: 1rem 5%;
@@ -657,20 +661,6 @@ nav {
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }   
-
-    .hero-box {
-        padding: 2.5rem 1.5rem 3.5rem 1.5rem;
-        width: 90%; 
-    }
-    
-    .hero-box h1 { 
-        font-size: 2.2rem; 
-        letter-spacing: 2px;
-    }
-    
-    .hero-box .script-text { 
-        font-size: 2rem; 
-    }
 
     .as-seen-in { 
         flex-direction: column; 
