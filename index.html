@@ -9,6 +9,16 @@
     <script src="index.js" defer></script>
 </head>
 <body>
+<div id="intro-screen">
+        <video playsinline id="intro-video">
+            <source src="./assets/intro.MOV" type="video/mp4">
+        </video>
+        <div id="enter-overlay">
+            <button id="enter-btn">Enter Mirror Mirror</button>
+        </div>
+        <button id="skip-btn" class="skip-btn" style="display: none;">Skip Video</button>
+    </div>
+
     <header class="hero" id="home">
         <nav>
             <div class="logo">
@@ -68,23 +78,23 @@
                 <ul class="accordion-list">
                     <li class="accordion-item">
                         <div class="accordion-header">
-                            <span>MIRROR MIRROR MASTERPIECE</span> <span>$200</span>
+                            <span>THE MIRROR MIRROR MASTERPIECE</span> <span>$200</span>
                         </div>
                         <div class="accordion-content">
                             <p>Your skin is uniquely created & this facial is designed to honor that. Whether you're dealing with dryness, dullness, sensitivity, hyperpigmentation, uneven texture, anti-aging, or mild acne. It includes a double cleanse, exfoliation, extractions, luxury mask, facial + decollate/arm massage, hydro or diamond machine treatment (optional), targeted serums & finishing hydration with products chosen just for you. Perfect for monthly maintenance or as your go-to treatment.</p>
                         </div>
                     </li>
-                    <!-- <li class="accordion-item">
+                    <li class="accordion-item">
                         <div class="accordion-header">
                             <span>CUSTOM SUPERFICIAL PEEL</span> <span>$180</span>
                         </div>
                         <div class="accordion-content">
                             <p>Peels target sun damage, acne, fine lines/wrinkles, and hyperpigmentation. Peels can also help improve your skin tone and texture overall. We will assess your skin to determine which peel is best for you. These peels can range from no peeling to heavier peeling. Make sure to stop using retinols or chemical exfoliants at least 1 week before.</p>
                         </div>
-                    </li> -->
+                    </li>
                     <li class="accordion-item">
                         <div class="accordion-header">
-                            <span>BACK REFINEMENT PEEL</span> <span>$180</span>
+                            <span>THE BACK REFINEMENT PEEL</span> <span>$180</span>
                         </div>
                         <div class="accordion-content">
                             <p>An intensive resurfacing treatment designed to target stubborn back acne, hyperpigmentation, and uneven texture. We perform a thorough skin assessment to select the ideal peel strength to clarify, smooth, and renew the skin. This service is the ultimate architectural reset for a clear, confident complexion.
@@ -100,7 +110,7 @@
                             <br><br><i><strong>Important Preparation Pre-Treatment Protocol: To ensure the safety and efficacy of your treatment, please discontinue the use of all retinols and chemical exfoliants at least one week prior to your appointment.</strong></i></p>
                         </div>
                     </li>
-                    <!-- <li class="accordion-item">
+                    <li class="accordion-item">
                         <div class="accordion-header">
                             <span>HYDRODERMABRASION FACIAL</span> <span>$160</span>
                         </div>
@@ -114,7 +124,7 @@
                             <p>- Exfoliation & Extractions</p>
                             <p>- Microcurrent Treatment to lift & sculpt the face.</p>
                         </div>
-                    </li> -->
+                    </li>
                     <li class="accordion-item">
                         <div class="accordion-header">
                             <span>BACK REFINEMENT FACIAL</span> <span>$120</span>
@@ -154,6 +164,9 @@
                             <p>Your journey to the perfect brow begins with Precision Blueprinting —a custom mapping technique designed to align with your unique facial geometry. Followed by waxing to define your features and achieve an immaculate finish.</p>
                         </div>
                     </li>
+                    <li class="price-list-item">
+                        <span>SHAPE & DEFINE</span> <span>$40</span>
+                    </li>
                 </ul>
             </div>
 
@@ -171,6 +184,7 @@
                     <li><span>LOWER ARM</span> <span>$55</span></li>
                     <li><span>LOWER BACK</span> <span>$50</span></li>
                     <li><span>STOMACH</span> <span>$45</span></li>
+                    <li><span>EAR & NOSE COMBO</span> <span>$35</span></li>
                     <li><span>UNDERARM</span> <span>$35</span></li>
                     <li><span>CHIN</span> <span>$20</span></li>
                     <li><span>NOSE</span> <span>$15</span></li>
